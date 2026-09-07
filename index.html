@@ -1,0 +1,190 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>mogeldev</title>
+<meta name="description" content="mogeldev — Systemadministrator seit 2021, Linux seit 2014. Ich baue mit KI kleine Open-Source-Tools und veröffentliche, was funktioniert.">
+<link rel="canonical" href="https://mogeldev.github.io/">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="mogeldev">
+<meta property="og:url" content="https://mogeldev.github.io/">
+<meta property="og:title" content="mogeldev">
+<meta property="og:description" content="Systemadministrator seit 2021, Linux seit 2014. Kleine Open-Source-Tools, mit KI gebaut.">
+<meta property="og:locale" content="de_DE">
+<meta property="og:locale:alternate" content="en_US">
+<meta property="og:image" content="https://mogeldev.github.io/og.png">
+<meta property="og:image:type" content="image/png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Terminal-Karte mit dem Prompt „$ whoami“ und dem Namen mogeldev.">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="mogeldev">
+<meta name="twitter:description" content="Systemadministrator seit 2021, Linux seit 2014. Kleine Open-Source-Tools, mit KI gebaut.">
+<meta name="twitter:image" content="https://mogeldev.github.io/og.png">
+<style>
+  :root {
+    --bg: #0f1115;
+    --fg: #e8e8e8;
+    --muted: #9aa0a6;
+    --accent: #6ee7b7;
+    --border: #2a2e35;
+  }
+  @media (prefers-color-scheme: light) {
+    :root {
+      --bg: #fafafa;
+      --fg: #1a1a1a;
+      --muted: #5f6368;
+      --accent: #0f9d58;
+      --border: #e2e2e2;
+    }
+  }
+  * { box-sizing: border-box; }
+  html, body {
+    margin: 0;
+    padding: 0;
+    background: var(--bg);
+    color: var(--fg);
+    font-family: ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas, monospace;
+  }
+  main {
+    max-width: 640px;
+    margin: 0 auto;
+    padding: 4rem 1.5rem 3rem;
+    line-height: 1.6;
+  }
+  h1 {
+    font-size: 1.75rem;
+    margin: 0 0 0.25rem;
+  }
+  .prompt {
+    color: var(--accent);
+  }
+  .tagline {
+    color: var(--muted);
+    margin: 0 0 2.5rem;
+    font-size: 0.95rem;
+  }
+  p {
+    margin: 0 0 1.25rem;
+  }
+  h2 {
+    font-size: 1.05rem;
+    font-weight: normal;
+    margin: 3rem 0 1.25rem;
+  }
+  .posts {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  .posts li {
+    margin-bottom: 1.25rem;
+  }
+  .posts .desc {
+    display: block;
+    color: var(--muted);
+    font-size: 0.9rem;
+  }
+  footer {
+    margin-top: 3rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid var(--border);
+    color: var(--muted);
+    font-size: 0.85rem;
+    display: flex;
+    justify-content: space-between;
+    gap: 1rem;
+  }
+  a {
+    color: var(--accent);
+    text-decoration: none;
+  }
+  a:hover {
+    text-decoration: underline;
+  }
+  .lang button {
+    background: none;
+    border: none;
+    padding: 0;
+    margin: 0;
+    font: inherit;
+    color: var(--muted);
+    cursor: pointer;
+  }
+  .lang button:hover {
+    color: var(--fg);
+  }
+  .lang button[aria-current="true"] {
+    color: var(--accent);
+  }
+  .lang span {
+    color: var(--border);
+    margin: 0 0.4rem;
+  }
+</style>
+</head>
+<body>
+<main>
+  <h1><span class="prompt">$</span> whoami</h1>
+  <p class="tagline" data-de="mogeldev &mdash; Systemadministrator" data-en="mogeldev &mdash; sysadmin">mogeldev &mdash; Systemadministrator</p>
+
+  <p data-de="Sysadmin seit 2021, Linux seit 2014. Open Source, wo's geht."
+     data-en="Sysadmin since 2021, Linux since 2014. Open source wherever possible.">Sysadmin seit 2021, Linux seit 2014. Open Source, wo's geht.</p>
+
+  <p data-de='Lieblingstools: <a href="https://jellyfin.org" target="_blank" rel="noopener">Jellyfin</a>, <a href="https://ffmpeg.org" target="_blank" rel="noopener">ffmpeg</a>, <a href="https://www.proxmox.com" target="_blank" rel="noopener">Proxmox</a>.'
+     data-en='Favourite tools: <a href="https://jellyfin.org" target="_blank" rel="noopener">Jellyfin</a>, <a href="https://ffmpeg.org" target="_blank" rel="noopener">ffmpeg</a>, <a href="https://www.proxmox.com" target="_blank" rel="noopener">Proxmox</a>.'>Lieblingstools: <a href="https://jellyfin.org" target="_blank" rel="noopener">Jellyfin</a>, <a href="https://ffmpeg.org" target="_blank" rel="noopener">ffmpeg</a>, <a href="https://www.proxmox.com" target="_blank" rel="noopener">Proxmox</a>.</p>
+
+  <h2><span class="prompt">$</span> <span data-de="ls projekte" data-en="ls projects">ls projekte</span></h2>
+
+  <!-- Neuer Eintrag: dieses <li> kopieren, Link/Texte anpassen. -->
+  <ul class="posts">
+    <li>
+      <a href="/sakurassh/">sakurassh</a>
+      <span class="desc" data-de="SSH-Manager" data-en="SSH manager">SSH-Manager</span>
+    </li>
+    <li>
+      <a href="/denwalama/">DenwaLama</a>
+      <span class="desc" data-de="Manager für Ollama" data-en="Manager for Ollama">Manager für Ollama</span>
+    </li>
+    <li>
+      <a href="/keitaihotspot/">KeitaiHotspot</a>
+      <span class="desc" data-de="WLAN-Hotspot für Flip-Phones" data-en="Wi-Fi hotspot for flip phones">WLAN-Hotspot für Flip-Phones</span>
+    </li>
+  </ul>
+
+  <footer>
+    <span>&copy; 2026 mogeldev</span>
+    <span class="lang">
+      <button type="button" data-lang="de" aria-current="true">DE</button><span>/</span><button type="button" data-lang="en" aria-current="false">EN</button>
+    </span>
+  </footer>
+</main>
+
+<script>
+  (function () {
+    var STORAGE_KEY = 'lang';
+
+    function setLang(lang) {
+      document.documentElement.lang = lang;
+      document.querySelectorAll('[data-' + lang + ']').forEach(function (el) {
+        el.innerHTML = el.dataset[lang];
+      });
+      document.querySelectorAll('.lang button').forEach(function (btn) {
+        btn.setAttribute('aria-current', String(btn.dataset.lang === lang));
+      });
+      try { localStorage.setItem(STORAGE_KEY, lang); } catch (e) {}
+    }
+
+    var stored;
+    try { stored = localStorage.getItem(STORAGE_KEY); } catch (e) {}
+    var initial = stored || (navigator.language || 'de').slice(0, 2).toLowerCase();
+    setLang(initial === 'de' ? 'de' : 'en');
+
+    document.querySelectorAll('.lang button').forEach(function (btn) {
+      btn.addEventListener('click', function () { setLang(btn.dataset.lang); });
+    });
+  })();
+</script>
+</body>
+</html>
