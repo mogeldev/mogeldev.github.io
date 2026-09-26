@@ -115,7 +115,7 @@
   .lang button:hover {
     color: var(--fg);
   }
-  .lang button[aria-current="true"] {
+  .lang button[aria-pressed="true"] {
     color: var(--accent);
   }
   .lang span {
@@ -127,13 +127,13 @@
 <body>
 <main>
   <h1><span class="prompt">$</span> whoami</h1>
-  <p class="tagline" data-de="mogeldev &mdash; Systemadministrator" data-en="mogeldev &mdash; sysadmin">mogeldev &mdash; Systemadministrator</p>
+  <p class="tagline" data-de="mogeldev &mdash; Systemadministrator" data-en="mogeldev &mdash; system administrator">mogeldev &mdash; Systemadministrator</p>
 
   <p data-de="Sysadmin seit 2021, Linux seit 2014. Open Source, wo's geht."
      data-en="Sysadmin since 2021, Linux since 2014. Open source wherever possible.">Sysadmin seit 2021, Linux seit 2014. Open Source, wo's geht.</p>
 
   <p data-de='Lieblingstools: <a href="https://jellyfin.org" target="_blank" rel="noopener">Jellyfin</a>, <a href="https://ffmpeg.org" target="_blank" rel="noopener">ffmpeg</a>, <a href="https://www.proxmox.com" target="_blank" rel="noopener">Proxmox</a>.'
-     data-en='Favourite tools: <a href="https://jellyfin.org" target="_blank" rel="noopener">Jellyfin</a>, <a href="https://ffmpeg.org" target="_blank" rel="noopener">ffmpeg</a>, <a href="https://www.proxmox.com" target="_blank" rel="noopener">Proxmox</a>.'>Lieblingstools: <a href="https://jellyfin.org" target="_blank" rel="noopener">Jellyfin</a>, <a href="https://ffmpeg.org" target="_blank" rel="noopener">ffmpeg</a>, <a href="https://www.proxmox.com" target="_blank" rel="noopener">Proxmox</a>.</p>
+     data-en='Favorite tools: <a href="https://jellyfin.org" target="_blank" rel="noopener">Jellyfin</a>, <a href="https://ffmpeg.org" target="_blank" rel="noopener">ffmpeg</a>, <a href="https://www.proxmox.com" target="_blank" rel="noopener">Proxmox</a>.'>Lieblingstools: <a href="https://jellyfin.org" target="_blank" rel="noopener">Jellyfin</a>, <a href="https://ffmpeg.org" target="_blank" rel="noopener">ffmpeg</a>, <a href="https://www.proxmox.com" target="_blank" rel="noopener">Proxmox</a>.</p>
 
   <h2><span class="prompt">$</span> <span data-de="ls projekte" data-en="ls projects">ls projekte</span></h2>
 
@@ -146,18 +146,18 @@
   <ul class="posts">
     <li>
       <a href="/Foldra/">foldra</a>
-      <span class="desc" data-de="Datei-Explorer mit Tabs für Windows 10 und 11 (Alpha)" data-en="Tabbed file explorer for Windows 10 and 11 (alpha)">Tabbed file explorer for Windows 10 and 11 (alpha)</span>
+      <span class="desc" data-de="Datei-Explorer mit Tabs für Windows 10 und 11 (Alpha)" data-en="Tabbed file explorer for Windows 10 and 11 (alpha)">Datei-Explorer mit Tabs für Windows 10 und 11 (Alpha)</span>
     </li>
     <li>
       <a href="/EmptyFolderCleaner/">empty-folder-cleaner</a>
-      <span class="desc" data-de="Findet und löscht leere Ordner unter Windows 7 bis 11" data-en="Finds and deletes empty folders on Windows 7 to 11">Findet und löscht leere Ordner unter Windows 7 bis 11</span>
+      <span class="desc" data-de="Findet und löscht leere Ordner unter Windows 7 bis 11" data-en="Finds and deletes empty folders on Windows 7 through 11">Findet und löscht leere Ordner unter Windows 7 bis 11</span>
     </li>
   </ul>
 
   <footer>
     <span>&copy; 2026 mogeldev</span>
     <span class="lang">
-      <button type="button" data-lang="de" aria-current="true">DE</button><span>/</span><button type="button" data-lang="en" aria-current="false">EN</button>
+      <button type="button" data-lang="de" aria-pressed="true">DE</button><span>/</span><button type="button" data-lang="en" aria-pressed="false">EN</button>
     </span>
   </footer>
 </main>
@@ -172,7 +172,7 @@
         el.innerHTML = el.dataset[lang];
       });
       document.querySelectorAll('.lang button').forEach(function (btn) {
-        btn.setAttribute('aria-current', String(btn.dataset.lang === lang));
+        btn.setAttribute('aria-pressed', String(btn.dataset.lang === lang));
       });
       try { localStorage.setItem(STORAGE_KEY, lang); } catch (e) {}
     }
